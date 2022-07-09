@@ -106,4 +106,4 @@ jobs:
           mv .github/app-readme.md README.md
           git add .
           git commit -m "updated readme"
-          git push 
+          git push --force
