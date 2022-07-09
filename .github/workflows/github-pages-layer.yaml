@@ -94,6 +94,12 @@ jobs:
         with:
           persist-credentials: false
           
+      - name: Configure git
+        run: |
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          
       - name: setup Readme
         run: |
           sed 's|TBD_APP_LINK|${{ steps.get-url.outputs.your_site }}|g' .github/app-readme.md > .github/app-readme.md
