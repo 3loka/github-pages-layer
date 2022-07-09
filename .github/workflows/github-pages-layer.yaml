@@ -102,8 +102,9 @@ jobs:
           
       - name: setup Readme
         run: |
+          git pull
           sed 's|TBD_APP_LINK|${{ steps.get-url.outputs.your_site }}|g' .github/app-readme.md > .github/app-readme.md
           mv .github/app-readme.md README.md
           git add .
           git commit -m "updated readme"
-          git push --force
+          git push 
