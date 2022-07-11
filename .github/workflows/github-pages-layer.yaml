@@ -103,7 +103,7 @@ jobs:
       - name: setup Readme
         run: |
           git pull
-          cat .github/app-readme.md | sed 's|TBD_APP_LINK|${{ steps.get-url.outputs.your_site }}|g' > output.md
+          cat .github/app-readme.md | sed 's|TBD_APP_LINK|${{ steps.get-url.outputs.your_site }}|g' > .github/output-github-pages-layer.md
           git add .
           git commit -m "updated readme"
           git push 
