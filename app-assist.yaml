@@ -4,7 +4,7 @@ name: Deploys a Node app on Github Pages
 configuration:
   topics: ["pages", "node"]
   workflow: "github-pages-layer.yaml"
-  outputfile: "output.md"
+  outputfile: ".github/output-github-pages-layer.md"
 copy-files:
   files-to-copy: [".github/app-readme.md"]
   folder-to-copy-to: [".github"]
