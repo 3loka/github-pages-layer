@@ -7,4 +7,4 @@ configuration:
   outputfile: ".github/output-github-pages-layer.md"
 copy-files:
   files-to-copy: [".github/app-readme.md"]
-  folder-to-copy-to: [".github"]
+  folder-to-copy-to: ".github"
